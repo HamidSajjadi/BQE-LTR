@@ -1,0 +1,241 @@
+Q_name,split,fold
+coronavirus immunity,train,1
+coronavirus mutations,train,1
+coronavirus hospital rationing,train,1
+coronavirus diabetes,train,1
+coronavirus early symptoms,train,1
+difference between coronavirus and flu,train,1
+coronavirus vaccine candidates,train,1
+coronavirus recovery,train,1
+coronavirus public datasets,train,1
+coronavirus mortality,train,1
+coronavirus hypertension,train,1
+coronavirus subtypes,train,1
+SARS-CoV-2 phylogenetic analysis,train,1
+SARS-CoV-2 spike structure,train,1
+coronavirus under reporting,train,1
+how long does coronavirus survive on surfaces,train,1
+coronavirus in Canada,train,1
+COVID-19 in African-Americans,train,1
+COVID-19 outcomes in children,train,1
+serological tests for coronavirus,train,1
+coronavirus asymptomatic,train,1
+coronavirus quarantine,train,1
+coronavirus biomarkers,train,1
+dexamethasone coronavirus,train,1
+coronavirus clinical trials,train,1
+how does coronavirus spread,train,1
+impact of masks on coronavirus transmission,train,1
+coronavirus outside body,train,1
+coronavirus drug repurposing,train,1
+coronavirus heart impacts,train,1
+coronavirus mental health impact,train,1
+what alcohol sanitizer kills coronavirus,train,1
+coronavirus remdesivir,train,1
+violence during pandemic,train,1
+coronavirus super spreaders,train,1
+coronavirus hydroxychloroquine,train,1
+post-infection COVID-19 immunity,train,1
+school reopening coronavirus,train,1
+coronavirus origin,test,1
+coronavirus test rapid testing,test,1
+coronavirus social distancing impact,test,1
+coronavirus response to weather changes,test,1
+animal models of COVID-19,test,1
+masks prevent coronavirus,test,1
+COVID inflammatory response,test,1
+COVID-19 cytokine storm,test,1
+how do people die from the coronavirus,test,1
+coronavirus and ACE inhibitors,test,1
+coronavirus origin,train,2
+coronavirus test rapid testing,train,2
+coronavirus social distancing impact,train,2
+coronavirus response to weather changes,train,2
+animal models of COVID-19,train,2
+masks prevent coronavirus,train,2
+COVID inflammatory response,train,2
+COVID-19 cytokine storm,train,2
+how do people die from the coronavirus,train,2
+coronavirus and ACE inhibitors,train,2
+coronavirus hypertension,train,2
+coronavirus subtypes,train,2
+SARS-CoV-2 phylogenetic analysis,train,2
+SARS-CoV-2 spike structure,train,2
+coronavirus under reporting,train,2
+how long does coronavirus survive on surfaces,train,2
+coronavirus in Canada,train,2
+COVID-19 in African-Americans,train,2
+COVID-19 outcomes in children,train,2
+serological tests for coronavirus,train,2
+coronavirus asymptomatic,train,2
+coronavirus quarantine,train,2
+coronavirus biomarkers,train,2
+dexamethasone coronavirus,train,2
+coronavirus clinical trials,train,2
+how does coronavirus spread,train,2
+impact of masks on coronavirus transmission,train,2
+coronavirus outside body,train,2
+coronavirus drug repurposing,train,2
+coronavirus heart impacts,train,2
+coronavirus mental health impact,train,2
+what alcohol sanitizer kills coronavirus,train,2
+coronavirus remdesivir,train,2
+violence during pandemic,train,2
+coronavirus super spreaders,train,2
+coronavirus hydroxychloroquine,train,2
+post-infection COVID-19 immunity,train,2
+school reopening coronavirus,train,2
+coronavirus immunity,test,2
+coronavirus mutations,test,2
+coronavirus hospital rationing,test,2
+coronavirus diabetes,test,2
+coronavirus early symptoms,test,2
+difference between coronavirus and flu,test,2
+coronavirus vaccine candidates,test,2
+coronavirus recovery,test,2
+coronavirus public datasets,test,2
+coronavirus mortality,test,2
+coronavirus origin,train,3
+coronavirus test rapid testing,train,3
+coronavirus social distancing impact,train,3
+coronavirus response to weather changes,train,3
+animal models of COVID-19,train,3
+masks prevent coronavirus,train,3
+COVID inflammatory response,train,3
+COVID-19 cytokine storm,train,3
+how do people die from the coronavirus,train,3
+coronavirus and ACE inhibitors,train,3
+coronavirus immunity,train,3
+coronavirus mutations,train,3
+coronavirus hospital rationing,train,3
+coronavirus diabetes,train,3
+coronavirus early symptoms,train,3
+difference between coronavirus and flu,train,3
+coronavirus vaccine candidates,train,3
+coronavirus recovery,train,3
+coronavirus public datasets,train,3
+coronavirus mortality,train,3
+coronavirus asymptomatic,train,3
+coronavirus quarantine,train,3
+coronavirus biomarkers,train,3
+dexamethasone coronavirus,train,3
+coronavirus clinical trials,train,3
+how does coronavirus spread,train,3
+impact of masks on coronavirus transmission,train,3
+coronavirus outside body,train,3
+coronavirus drug repurposing,train,3
+coronavirus heart impacts,train,3
+coronavirus mental health impact,train,3
+what alcohol sanitizer kills coronavirus,train,3
+coronavirus remdesivir,train,3
+violence during pandemic,train,3
+coronavirus super spreaders,train,3
+coronavirus hydroxychloroquine,train,3
+post-infection COVID-19 immunity,train,3
+school reopening coronavirus,train,3
+coronavirus hypertension,test,3
+coronavirus subtypes,test,3
+SARS-CoV-2 phylogenetic analysis,test,3
+SARS-CoV-2 spike structure,test,3
+coronavirus under reporting,test,3
+how long does coronavirus survive on surfaces,test,3
+coronavirus in Canada,test,3
+COVID-19 in African-Americans,test,3
+COVID-19 outcomes in children,test,3
+serological tests for coronavirus,test,3
+coronavirus origin,train,4
+coronavirus test rapid testing,train,4
+coronavirus social distancing impact,train,4
+coronavirus response to weather changes,train,4
+animal models of COVID-19,train,4
+masks prevent coronavirus,train,4
+COVID inflammatory response,train,4
+COVID-19 cytokine storm,train,4
+how do people die from the coronavirus,train,4
+coronavirus and ACE inhibitors,train,4
+coronavirus immunity,train,4
+coronavirus mutations,train,4
+coronavirus hospital rationing,train,4
+coronavirus diabetes,train,4
+coronavirus early symptoms,train,4
+difference between coronavirus and flu,train,4
+coronavirus vaccine candidates,train,4
+coronavirus recovery,train,4
+coronavirus public datasets,train,4
+coronavirus mortality,train,4
+coronavirus hypertension,train,4
+coronavirus subtypes,train,4
+SARS-CoV-2 phylogenetic analysis,train,4
+SARS-CoV-2 spike structure,train,4
+coronavirus under reporting,train,4
+how long does coronavirus survive on surfaces,train,4
+coronavirus in Canada,train,4
+COVID-19 in African-Americans,train,4
+COVID-19 outcomes in children,train,4
+serological tests for coronavirus,train,4
+coronavirus heart impacts,train,4
+coronavirus mental health impact,train,4
+what alcohol sanitizer kills coronavirus,train,4
+coronavirus remdesivir,train,4
+violence during pandemic,train,4
+coronavirus super spreaders,train,4
+coronavirus hydroxychloroquine,train,4
+post-infection COVID-19 immunity,train,4
+school reopening coronavirus,train,4
+coronavirus asymptomatic,test,4
+coronavirus quarantine,test,4
+coronavirus biomarkers,test,4
+dexamethasone coronavirus,test,4
+coronavirus clinical trials,test,4
+how does coronavirus spread,test,4
+impact of masks on coronavirus transmission,test,4
+coronavirus outside body,test,4
+coronavirus drug repurposing,test,4
+coronavirus origin,train,5
+coronavirus test rapid testing,train,5
+coronavirus social distancing impact,train,5
+coronavirus response to weather changes,train,5
+animal models of COVID-19,train,5
+masks prevent coronavirus,train,5
+COVID inflammatory response,train,5
+COVID-19 cytokine storm,train,5
+how do people die from the coronavirus,train,5
+coronavirus and ACE inhibitors,train,5
+coronavirus immunity,train,5
+coronavirus mutations,train,5
+coronavirus hospital rationing,train,5
+coronavirus diabetes,train,5
+coronavirus early symptoms,train,5
+difference between coronavirus and flu,train,5
+coronavirus vaccine candidates,train,5
+coronavirus recovery,train,5
+coronavirus public datasets,train,5
+coronavirus mortality,train,5
+coronavirus hypertension,train,5
+coronavirus subtypes,train,5
+SARS-CoV-2 phylogenetic analysis,train,5
+SARS-CoV-2 spike structure,train,5
+coronavirus under reporting,train,5
+how long does coronavirus survive on surfaces,train,5
+coronavirus in Canada,train,5
+COVID-19 in African-Americans,train,5
+COVID-19 outcomes in children,train,5
+serological tests for coronavirus,train,5
+coronavirus asymptomatic,train,5
+coronavirus quarantine,train,5
+coronavirus biomarkers,train,5
+dexamethasone coronavirus,train,5
+coronavirus clinical trials,train,5
+how does coronavirus spread,train,5
+impact of masks on coronavirus transmission,train,5
+coronavirus outside body,train,5
+coronavirus drug repurposing,train,5
+coronavirus heart impacts,test,5
+coronavirus mental health impact,test,5
+what alcohol sanitizer kills coronavirus,test,5
+coronavirus remdesivir,test,5
+violence during pandemic,test,5
+coronavirus super spreaders,test,5
+coronavirus hydroxychloroquine,test,5
+post-infection COVID-19 immunity,test,5
+school reopening coronavirus,test,5
