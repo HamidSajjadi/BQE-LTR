@@ -1,5 +1,6 @@
-##Tips
+## Tips
 I've used mini BERT with an embedding size of `256`. You probably need to configure the LTR model to use the embedding size of your own version of BERT, i.e. `512`.
+Put your own BERT model in `models` folder. Update the address of models in notebooks accordingly.
 
 ## Training
 1. First of all, run `prep_data.ipynb`. This notebook calculates the embedding for queries and the candidate expansion terms. If you want to change how the embeddings are calculated, you should edit the `get_query_and_candidates_embeddings` in the `utils.py` folder.
