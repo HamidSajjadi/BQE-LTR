@@ -12,4 +12,18 @@ Put your own BERT model in `models` folder. Update the address of models in note
 
 
 ## Evaluation
-the evaluation notebook will be added shortly.
+You can find an example of evaluation in `rewarder_example.ipynb` notebook.
+
+You must give the `cord_qrels.json` file to an instance of the `Rewarder` class. Then using the `reward_one` method of this class you can calculate the result for the given `metric` at `n_results`.
+
+For example the following instantition of this class will evaluate the `recall@100` of the `coronavirus origin asia` 
+
+```python
+rewarder = Rewarder(
+        "./data/cord_qrels.json", n_results=at_n, metric=metric
+    )
+rewarder.reward_one('coronavirus origin asia', 'coronavirus origin')
+ # the second input is the id of query, 
+ # so the evalution is based on the related papers for this query in qrels.json file 
+ # (here id is the base query itself)
+```
