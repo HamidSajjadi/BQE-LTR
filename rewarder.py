@@ -4,8 +4,7 @@ import json
 from helpers import (
     search_pubmed,
     search_pubmed_for_labeled_data,
-    evaluate_search_result,
-    search_elastic,
+    evaluate_search_result
 )
 
 
@@ -21,8 +20,8 @@ class Rewarder:
         self.metric = metric
         with open(qrels_file, "r") as qrels_file:
             self.qrels = json.load(qrels_file)
-        if search_engine != "pubmed" and search_engine != "elastic":
-            raise f"`{search_engine}` not implemented. Please use `pubmed` or `elastic`"
+        if search_engine != "pubmed":
+            raise f"`{search_engine}` not implemented. Please use `pubmed`"
         self.se = search_engine
         self.qrels_file = qrels_file
 
@@ -46,10 +45,9 @@ class Rewarder:
         return response
 
     def reward_one(self, sample: str, id: str) -> float:
-        search_function = search_pubmed if self.se == "pubmed" else search_elastic
         reward = 0.0
         try:
-            result = search_function(sample, max_results=self.n_results)
+            result = search_pubmed(sample, max_results=self.n_results)
             reward = evaluate_search_result(id, result, self.qrels, metric=self.metric, n=self.n_results)
         except Exception as e:
             print("error!")

@@ -1,6 +1,5 @@
 from pymed import PubMed
 from typing import List, Union
-from elasticsearch import Elasticsearch
 
 from backoff import on_exception, expo, constant
 from ratelimit import RateLimitException, limits
@@ -10,8 +9,6 @@ pubmed = PubMed(
         tool="PubMedSearcher",
         email="sample@sample.com",
     )
-
-es = Elasticsearch()
 DEFAULT_SIZE = 1000
 MAX_AVAILABLE_SIZE = 10000
 
@@ -37,98 +34,6 @@ def search_pubmed(query: str, max_results: int = 10000) -> List[int]:
 
     return articleInfo
 
-def search_elastic(keywords: Union[str, List[str]], max_results=1000) -> List[int]:
-    if isinstance(keywords, list):
-        query = ' '.join(keywords)
-    else:
-        query = keywords
-
-    query_dictionary = {
-        "bool": {
-            "should": {
-                "multi_match": {
-                    "query": query,
-                    "fields": ["title", "text"],
-                    "minimum_should_match" :"20%"
-                }
-            }
-        }
-    }
-    if max_results and max_results <= MAX_AVAILABLE_SIZE:
-        pmids = []
-        res = es.search(index='cord_medline', query=query_dictionary, fields=[], _source=False, size=max_results,
-                        filter_path=['hits.hits._id', 'took'],
-                        track_total_hits=False,
-                        request_timeout=500)
-        hits = res['hits']['hits']
-        for h in hits:
-            try:
-                pmids.append(int(h['_id']))
-            except ValueError:
-                pass
-        # print(f"ES took: {res['took']}, Search Time {t1 - t0}, List Time: {t2 - t1}")
-    else:
-        pmids = __elastic_search_pit(query_dictionary, max_results)
-
-    return pmids
-
-
-def __elastic_search_pit(query, max_results):
-    if max_results:
-        size = min(max_results, MAX_AVAILABLE_SIZE)
-    else:
-        size = MAX_AVAILABLE_SIZE
-
-    pit = es.open_point_in_time(index='cord_medline', keep_alive="5m")
-    pmids = []
-
-    def append_to_pmids(results):
-        sa = None
-        for idx, h in enumerate(results):
-            if idx == len(hits) - 1:
-                sa = h["sort"]
-            try:
-                pmids.append(int(h["_id"]))
-            except Exception:
-                continue
-        return sa
-
-    res = es.search(
-        index='cord_medline',
-        query=query,
-        fields=["pmid"],
-        size=size,
-        request_timeout=500,
-        pit=pit,
-        sort=["_score"],
-        _source=False,
-        filter_path=["hits.hits._id", "hits.total.value", "hits.hits.sort"],
-        track_total_hits=True,
-    )
-    hits = res["hits"]["hits"]
-    total_hits = res["hits"]["total"]["value"]
-    if not max_results:
-        max_results = total_hits
-
-    search_after = append_to_pmids(hits)
-
-    while len(pmids) < max_results:
-        size = min(MAX_AVAILABLE_SIZE, max_results - len(pmids))
-        res = es.search(
-            query=query,
-            fields=["pmid"],
-            size=size,
-            request_timeout=500,
-            pit=pit,
-            sort=["_score"],
-            track_total_hits=False,
-            search_after=search_after,
-        )
-        hits = res["hits"]["hits"]
-        search_after = append_to_pmids(hits)
-
-    es.close_point_in_time(body=pit)
-    return pmids
 
 
 def precision(related_set, search_result, k=None):
